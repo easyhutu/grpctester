@@ -33,9 +33,11 @@ if __name__ == '__main__':
     os.system(cmd)
     pname = proto_filename.split('.')[0]
     print(f'{proto_filename} compile success')
-    pb2_path = os.path.join(PB_PATH, '{}_pb2_grpc.py'.format(pname))
+    pb2_path = os.path.join(PB_PATH, '{}_pb2.py'.format(pname))
+    pb2grpc_path = os.path.join(PB_PATH, '{}_pb2_grpc.py'.format(pname))
     if pb2_path:
         add_from(pb2_path)
+        add_from(pb2grpc_path)
         client_value = create_template_client(proto_file, pname)
         client_path = os.path.join(PB_PATH, f'{pname}_client.py')
         print(f'create path: {client_path}')
