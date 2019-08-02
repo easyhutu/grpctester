@@ -7,5 +7,6 @@ class HelloWordCase(unittest.TestCase):
         self.client = Client()
 
     def test_resp(self):
-        value = self.client.SayHello()
+        value = self.client.SayHello(params={'name': 's2'})
         print(value)
+        self.assertTrue(value)

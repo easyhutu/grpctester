@@ -11,4 +11,4 @@ PROTO_PATH = os.path.join(PB_PATH, 'protos')
 CRED_PATH = os.path.join(_CREDS_PATH, 'root.crt')
 
 # host localhost:5001
-HOST = ''
+HOST = 'www.gdtopic.cn:8080'
