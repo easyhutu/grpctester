@@ -1,8 +1,8 @@
-from lib.arg_parse import arg_proto_filename
+from libs.arg_parse import arg_proto_filename
 import sys
 from settings import PB_PATH, PROTO_PATH
 import os
-from lib.grpc_client_template import create_template_client
+from libs.grpc_client_template import create_template_client
 
 
 proto_cmd = 'python -m grpc_tools.protoc --python_out={} --grpc_python_out={} -I{} {}'
